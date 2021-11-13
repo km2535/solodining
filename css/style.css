@@ -1,0 +1,93 @@
+/* common */
+.container {
+  width: 100%;
+}
+header {
+  width: 100%;
+}
+header > h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+#menus {
+  width: 100%;
+}
+
+#menus > div {
+  border: 1px solid black;
+  height: 400px;
+  margin-bottom: 15px;
+  position: relative;
+}
+#menus h2 {
+  position: absolute;
+  padding: 5px;
+  bottom: 5%;
+  right: 3%;
+  color: white;
+  text-shadow: 3px 3px 5px black;
+  font-size: 1.5rem;
+}
+#menu1 {
+  background: url(../images/dish1.jpg) center no-repeat;
+  background-size: cover;
+}
+#menu2 {
+  background: url(../images/dish2.jpg) center no-repeat;
+  background-size: cover;
+}
+#menu3 {
+  background: url(../images/dish3.jpg) center no-repeat;
+  background-size: cover;
+}
+#menu4 {
+  background: url(../images/dish4.jpg) center no-repeat;
+  background-size: cover;
+}
+#menu5 {
+  background: url(../images/dish5.jpg) center no-repeat;
+  background-size: cover;
+}
+footer {
+  width: 100%;
+  background-color: black;
+  height: 100px;
+}
+footer > p {
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  font-variant: small-caps;
+}
+/* 테블릿 사이즈 */
+@media all and (min-width: 768px) {
+  #menus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #menu1,
+  #menu2,
+  #menu3,
+  #menu4 {
+    width: 49%;
+  }
+  #menu5 {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  #menus > div {
+    width: 32%;
+  }
+  #menu5 {
+    /* grow를 사용하여 다른 flex들의 크기의 2배로 설정하여 공간을 차지 하였다. */
+    /* flex-grow: 2;
+    flex-basis: 0;
+    flex-shrink: 2; */
+    flex: 2 2 0;
+    margin-left: 1.8%;
+  }
+}
